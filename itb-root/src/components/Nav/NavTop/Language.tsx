@@ -1,6 +1,6 @@
 const Language = () => {
   return (
-    <div>
+    <div className="flex gap-4 px-1.5">
       <span>
         <img src="../src/assets/img/indonesia.png" alt="" />
       </span>
