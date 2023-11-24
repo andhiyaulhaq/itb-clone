@@ -1,13 +1,16 @@
-import Headline from "./components/Headline";
-import Hero from "./components/Hero/Hero";
-import Nav from "./components/Nav/Nav";
+import { Route, Routes } from "react-router-dom";
+
+import { Home } from "./_root/pages";
+import RootLayout from "./_root/RootLayout";
 
 function App() {
   return (
     <>
-      <Nav />
-      <Hero />
-      <Headline />
+      <Routes>
+        <Route element={<RootLayout />}>
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
     </>
   );
 }
