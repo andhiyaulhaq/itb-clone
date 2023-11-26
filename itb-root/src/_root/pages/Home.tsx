@@ -1,9 +1,10 @@
-import { Agenda, Berita } from "@/types";
-import { AgendasList, BeritaList, Slides } from "../../constants";
+import { Agenda, Berita, Video } from "@/types";
+import { AgendasList, BeritaList, Slides, VideosList } from "../../constants";
 import {
   Button,
   CardAgenda,
   CardBerita,
+  CardVideo,
   ImageSlider
 } from "../../components/ui";
 
@@ -43,7 +44,6 @@ const Home = () => {
             ({ id, title, url, date, category, preview }: Berita) => (
               <CardBerita
                 key={id}
-                id={id}
                 title={title}
                 url={url}
                 date={date}
@@ -61,12 +61,21 @@ const Home = () => {
             {AgendasList.map(({ id, title, date, month, day }: Agenda) => (
               <CardAgenda
                 key={id}
-                id={id}
                 title={title}
                 date={date}
                 month={month}
                 day={day}
               />
+            ))}
+          </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <h1>Video</h1>
+          <div>
+            {VideosList.map(({ id, title, thumbnail }: Video) => (
+              <CardVideo key={id} title={title} thumbnail={thumbnail} />
             ))}
           </div>
         </div>

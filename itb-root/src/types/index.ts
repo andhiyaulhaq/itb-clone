@@ -1,5 +1,5 @@
 export interface Agenda {
-  id: number;
+  id?: number;
   title: string;
   date: number;
   month: string;
@@ -7,7 +7,7 @@ export interface Agenda {
 }
 
 export interface Berita {
-  id: number;
+  id?: number;
   title: string;
   url: string;
   date: string;
@@ -30,7 +30,7 @@ export interface SlideShowProps {
 }
 
 export interface Video {
-  id: number;
+  id?: number;
   title: string;
   thumbnail: string;
 }
