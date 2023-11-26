@@ -1,5 +1,11 @@
-import { BeritaList, Slides } from "../../constants";
-import { Button, ImageSlider } from "../../components/ui";
+import { Agenda, Berita } from "@/types";
+import { AgendasList, BeritaList, Slides } from "../../constants";
+import {
+  Button,
+  CardAgenda,
+  CardBerita,
+  ImageSlider
+} from "../../components/ui";
 
 const Home = () => {
   return (
@@ -33,6 +39,36 @@ const Home = () => {
       <section>
         <div>
           <h1>Berita</h1>
+          {BeritaList.map(
+            ({ id, title, url, date, category, preview }: Berita) => (
+              <CardBerita
+                key={id}
+                id={id}
+                title={title}
+                url={url}
+                date={date}
+                category={category}
+                preview={preview}
+              />
+            )
+          )}
+        </div>
+      </section>
+      <section>
+        <div>
+          <h1>Agenda</h1>
+          <div>
+            {AgendasList.map(({ id, title, date, month, day }: Agenda) => (
+              <CardAgenda
+                key={id}
+                id={id}
+                title={title}
+                date={date}
+                month={month}
+                day={day}
+              />
+            ))}
+          </div>
         </div>
       </section>
     </>

@@ -1,4 +1,4 @@
-import { menu } from "@/types/menu";
+import { menu } from "@/types";
 
 const navBottomMenuList: menu[] = [
   {

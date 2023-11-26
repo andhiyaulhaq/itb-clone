@@ -1,6 +1,6 @@
 import { ArrowBigLeft, ArrowBigRight } from "lucide-react";
 
-import { SlideShowProps } from "@/types/slide";
+import { SlideShowProps } from "@/types";
 import { useState } from "react";
 
 const ImageSlider = ({ slideArray }: SlideShowProps) => {

@@ -1,4 +1,4 @@
-import { Berita } from "@/types/berita";
+import { Berita } from "@/types";
 
 const CardBerita = (props: Berita) => {
   return (

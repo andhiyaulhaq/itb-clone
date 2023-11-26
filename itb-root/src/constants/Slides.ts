@@ -1,4 +1,4 @@
-import { Slide } from "@/types/slide";
+import { Slide } from "@/types";
 
 const Slides: Slide[] = [
   { url: "/src/assets/img/1440x460.png", title: "first" },

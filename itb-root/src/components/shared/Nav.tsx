@@ -15,10 +15,10 @@ const Nav = () => {
       >
         <div id="language" className="flex gap-4 px-1.5">
           <span>
-            <img src="../src/assets/img/indonesia.png" alt="" />
+            <img src="/src/assets/img/nav/indonesia.png" alt="" />
           </span>
           <span>
-            <img src="../src/assets/img/uk.png" alt="" />
+            <img src="/src/assets/img/nav/uk.png" alt="" />
           </span>
         </div>
         <ul className="flex items-center text-gray-200 gap-4">
@@ -46,7 +46,11 @@ const Nav = () => {
         id="NavBottom"
         className="w-screen bg-blue-600 px-24 flex justify-between items-center"
       >
-        <img src="/src/assets/img/logo-itb-1920.png" alt="" className="h-16" />
+        <img
+          src="/src/assets/img/nav/logo-itb-1920.png"
+          alt=""
+          className="h-16"
+        />
         <div className="flex gap-8">
           <ul className="flex gap-6 text-gray-100">
             {navBottomMenuList.map((menu, index) => (
