@@ -11,7 +11,7 @@ const Nav = () => {
     <nav>
       <div
         id="NavTop"
-        className="flex justify-between items-center w-screen bg-blue-950 h-11 px-24"
+        className="flex justify-between items-center w-full bg-blue-950 h-11 px-24"
       >
         <div id="language" className="flex gap-4 px-1.5">
           <span>
@@ -44,7 +44,7 @@ const Nav = () => {
 
       <div
         id="NavBottom"
-        className="w-screen bg-blue-600 px-24 flex justify-between items-center"
+        className="w-full bg-blue-600 px-24 flex justify-between items-center"
       >
         <img
           src="/src/assets/img/nav/logo-itb-1920.png"

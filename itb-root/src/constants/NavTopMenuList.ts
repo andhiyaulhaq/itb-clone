@@ -1,6 +1,6 @@
-import { menu } from "@/types";
+import { Menu } from "@/types";
 
-const navTopMenuList: menu[] = [
+const navTopMenuList: Menu[] = [
   {
     text: "Staf",
     url: ""

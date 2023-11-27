@@ -15,9 +15,32 @@ export interface Berita {
   preview: string;
 }
 
-export interface menu {
+export interface Menu {
   text: string;
   url: string;
+}
+
+export interface Multikampus {
+  id?: number;
+  title: string;
+  icon: string;
+  address: string;
+  email: string | null;
+}
+
+export interface Partner {
+  title: string;
+  img: string;
+}
+
+export interface SitemapChild {
+  text: string;
+  url: string;
+}
+
+export interface SitemapParent {
+  parent: string;
+  children: SitemapChild[];
 }
 
 export interface Slide {

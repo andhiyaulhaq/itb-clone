@@ -10,20 +10,22 @@ import {
 
 const Home = () => {
   return (
-    <>
-      <section id="Hero" className="w-screen flex flex-col items-center">
+    <div id="Home" className="">
+      <section id="Hero" className="w-full flex flex-col items-center">
         <ImageSlider slideArray={Slides} />
       </section>
-      <section id="headline" className="flex flex-col items-center">
-        <div className="max-w-7xl flex flex-col items-center">
-          <h1>Pidato Rektor pada Wisuda Pertama ITB Oktober 2023</h1>
+      <section id="headline" className="w-full flex flex-col items-center">
+        <div className="max-w-7xl flex flex-col items-center mt-16 mb-12 gap-12">
+          <h1 className="font-sans text-4xl font-normal text-justify">
+            Pidato Rektor pada Wisuda Pertama ITB Oktober 2023
+          </h1>
           <div className="flex gap-8">
             <img
               src="/src/assets/img/pidato_rektor.jpg"
               alt="foto_rektor_pidato"
               className="h-48"
             />
-            <p>
+            <p className="font-sans text-lg font-light ">
               Dalam seabad belakangan ini kita menyaksikan lompatan kemajuan
               pengetahuan dan teknologi yang telah menghasilkan industrialisasi
               ekonomi. Pada saat yang sama, kesenjangan semakin meluas dan
@@ -37,27 +39,34 @@ const Home = () => {
           <Button>Selengkapnya</Button>
         </div>
       </section>
-      <section>
-        <div>
-          <h1>Berita</h1>
-          {BeritaList.map(
-            ({ id, title, url, date, category, preview }: Berita) => (
-              <CardBerita
-                key={id}
-                title={title}
-                url={url}
-                date={date}
-                category={category}
-                preview={preview}
-              />
-            )
-          )}
+      <section id="berita" className="w-full flex flex-col items-center">
+        <div className="max-w-6xl flex flex-col items-center my-12 gap-11">
+          <h1 className="font-sans text-4xl font-normal text-justify">
+            Berita
+          </h1>
+          <div className="flex gap-10">
+            {BeritaList.map(
+              ({ id, title, url, date, category, preview }: Berita) => (
+                <CardBerita
+                  key={id}
+                  title={title}
+                  url={url}
+                  date={date}
+                  category={category}
+                  preview={preview}
+                />
+              )
+            )}
+          </div>
+          <Button>Selengkapnya</Button>
         </div>
       </section>
-      <section>
-        <div>
-          <h1>Agenda</h1>
-          <div>
+      <section id="agenda" className="w-full flex flex-col items-center">
+        <div className="max-w-6xl flex flex-col items-center my-12 gap-14">
+          <h1 className="font-sans text-4xl font-normal text-justify">
+            Agenda
+          </h1>
+          <div className="flex gap-8">
             {AgendasList.map(({ id, title, date, month, day }: Agenda) => (
               <CardAgenda
                 key={id}
@@ -70,17 +79,17 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section>
-        <div>
-          <h1>Video</h1>
-          <div>
+      <section id="video" className="w-full flex flex-col items-center">
+        <div className="max-w-6xl flex flex-col items-center my-14 gap-14">
+          <h1 className="font-sans text-4xl font-normal text-justify">Video</h1>
+          <div className="flex gap-8">
             {VideosList.map(({ id, title, thumbnail }: Video) => (
               <CardVideo key={id} title={title} thumbnail={thumbnail} />
             ))}
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

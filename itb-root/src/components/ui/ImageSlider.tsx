@@ -22,14 +22,14 @@ const ImageSlider = ({ slideArray }: SlideShowProps) => {
 
   return (
     <>
-      <div className="relative" style={{ maxWidth: "1440px" }}>
-        <div className="w-full h-auto flex overflow-hidden">
+      <div className="relative w-full" style={{ maxWidth: "1440px" }}>
+        <div className="w-full flex overflow-x-hidden">
           {slideArray.map((slide, index) => (
             <img
               key={index}
               src={slide.url}
               alt=""
-              className="w-full h-auto object-cover block"
+              className="w-full object-cover block"
             />
           ))}
         </div>
