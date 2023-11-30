@@ -1,9 +1,26 @@
-import { Agenda, Berita, Video } from "@/types";
-import { AgendasList, BeritaList, Slides, VideosList } from "../../constants";
+import {
+  Agenda,
+  Berita,
+  Multikampus,
+  Partner,
+  SitemapChild,
+  SitemapParent,
+  Video
+} from "@/types";
+import {
+  AgendasList,
+  BeritaList,
+  MultikampusList,
+  PartnersList,
+  SitemapParentsList,
+  Slides,
+  VideosList
+} from "../../constants";
 import {
   Button,
   CardAgenda,
   CardBerita,
+  CardMultikampus,
   CardVideo,
   ImageSlider
 } from "../../components/ui";
@@ -11,7 +28,7 @@ import {
 const Home = () => {
   return (
     <div id="Home" className="">
-      <section id="Hero" className="w-full flex flex-col items-center">
+      <section id="hero" className="w-full flex flex-col items-center">
         <ImageSlider slideArray={Slides} />
       </section>
       <section id="headline" className="w-full flex flex-col items-center">
@@ -87,6 +104,41 @@ const Home = () => {
               <CardVideo key={id} title={title} thumbnail={thumbnail} />
             ))}
           </div>
+        </div>
+      </section>
+      <section id="partners" className="w-full flex justify-center">
+        <div className="max-w-6xl flex flex-col items-center">
+          <div className="flex items-center">
+            {PartnersList.map(({ title, img }: Partner) => (
+              <img src={img} alt={title} />
+            ))}
+          </div>
+        </div>
+      </section>
+      <section id="multikampus" className="w-full flex justify-center">
+        <div className="flex gap-3">
+          {MultikampusList.map(
+            ({ title, icon, address, email }: Multikampus) => (
+              <CardMultikampus
+                title={title}
+                icon={icon}
+                address={address}
+                email={email}
+              />
+            )
+          )}
+        </div>
+      </section>
+      <section id="sitemap" className="w-full flex justify-center">
+        <div className="flex gap-8">
+          {SitemapParentsList.map(({ parent, children }: SitemapParent) => (
+            <div className="flex flex-col">
+              <h2>{parent}</h2>
+              {children.map(({ text, url }: SitemapChild) => (
+                <a href={url}>{text}</a>
+              ))}
+            </div>
+          ))}
         </div>
       </section>
     </div>

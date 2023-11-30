@@ -4,4 +4,6 @@ export { default as navTopMenuList } from "./NavTopMenuList";
 export { default as navBottomMenuList } from "./NavBottomMenuList";
 export { default as AgendasList } from "./AgendasList";
 export { default as VideosList } from "./VideosList";
-export { default as SitemapParentList } from "./SitemapParentList";
+export { default as SitemapParentsList } from "./SitemapParentsList";
+export { default as PartnersList } from "./PartnersList";
+export { default as MultikampusList } from "./MultikampusList";

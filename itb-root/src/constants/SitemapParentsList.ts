@@ -1,6 +1,6 @@
 import { SitemapParent } from "@/types";
 
-const SitemapParentList: SitemapParent[] = [
+const SitemapParentsList: SitemapParent[] = [
   {
     parent: "Tentang ITB",
     children: [
@@ -128,4 +128,4 @@ const SitemapParentList: SitemapParent[] = [
   }
 ];
 
-export default SitemapParentList;
+export default SitemapParentsList;

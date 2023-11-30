@@ -21,7 +21,6 @@ export interface Menu {
 }
 
 export interface Multikampus {
-  id?: number;
   title: string;
   icon: string;
   address: string;
