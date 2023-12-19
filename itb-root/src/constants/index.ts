@@ -7,3 +7,4 @@ export { default as VideosList } from "./VideosList";
 export { default as SitemapParentsList } from "./SitemapParentsList";
 export { default as PartnersList } from "./PartnersList";
 export { default as MultikampusList } from "./MultikampusList";
+export { default as SocmedList } from "./SocmedList";

@@ -8,18 +8,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Nav = () => {
   return (
-    <nav>
+    <nav className="fixed z-50 w-full">
       <div
         id="NavTop"
-        className="flex justify-between items-center w-full bg-blue-950 h-11 px-24"
+        className="flex justify-between items-center w-full bg-sky-950 h-11 px-24"
       >
         <div id="language" className="flex gap-4 px-1.5">
-          <span>
+          <a href="">
             <img src="/src/assets/img/nav/indonesia.png" alt="" />
-          </span>
-          <span>
+          </a>
+          <a href="">
             <img src="/src/assets/img/nav/uk.png" alt="" />
-          </span>
+          </a>
         </div>
         <ul className="flex items-center text-gray-200 gap-4">
           {navTopMenuList.map((menu, index) => (
@@ -28,29 +28,41 @@ const Nav = () => {
             </li>
           ))}
           <li>
-            <div className="px-2 py-1 bg-red-700 rounded-md">COVID19</div>
+            <a href="">
+              <div className="px-2 py-1 bg-red-700 rounded-md">COVID19</div>
+            </a>
             {/* <span>COVID19</span> */}
           </li>
           <li className="flex gap-3 items-center">
-            <FontAwesomeIcon icon={faEnvelope} className="pt-0.5" />
-            <span>Kontak</span>
+            <a href="">
+              <FontAwesomeIcon icon={faEnvelope} className="pt-0.5" />
+            </a>
+            <a href="">
+              <span>Kontak</span>
+            </a>
           </li>
           <li className="flex gap-3 items-center">
-            <FontAwesomeIcon icon={faMagnifyingGlass} className="pt-0.5" />
-            <span>Cari</span>
+            <a href="">
+              <FontAwesomeIcon icon={faMagnifyingGlass} className="pt-0.5" />
+            </a>
+            <a href="">
+              <span>Cari</span>
+            </a>
           </li>
         </ul>
       </div>
 
       <div
         id="NavBottom"
-        className="w-full bg-blue-600 px-24 flex justify-between items-center"
+        className="w-full bg-blue-800 px-24 flex justify-between items-center"
       >
-        <img
-          src="/src/assets/img/nav/logo-itb-1920.png"
-          alt=""
-          className="h-16"
-        />
+        <a href="">
+          <img
+            src="/src/assets/img/nav/logo-itb-1920.png"
+            alt=""
+            className="h-16"
+          />
+        </a>
         <div className="flex gap-8">
           <ul className="flex gap-6 text-gray-100">
             {navBottomMenuList.map((menu, index) => (
@@ -59,14 +71,16 @@ const Nav = () => {
               </li>
             ))}
           </ul>
-          <div
-            id="menu-btn"
-            className="border-2 border-gray-200 rounded-sm h-6 w-10 flex flex-col justify-center items-center gap-0.5"
-          >
-            <span className="h-0.5 w-4 bg-gray-200"></span>
-            <span className="h-0.5 w-4 bg-gray-200"></span>
-            <span className="h-0.5 w-4 bg-gray-200"></span>
-          </div>
+          <a href="">
+            <div
+              id="menu-btn"
+              className="border-2 border-gray-200 rounded-sm h-6 w-10 flex flex-col justify-center items-center gap-0.5"
+            >
+              <span className="h-0.5 w-4 bg-gray-200"></span>
+              <span className="h-0.5 w-4 bg-gray-200"></span>
+              <span className="h-0.5 w-4 bg-gray-200"></span>
+            </div>
+          </a>
         </div>
       </div>
     </nav>

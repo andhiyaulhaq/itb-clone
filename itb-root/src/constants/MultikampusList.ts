@@ -26,7 +26,7 @@ const MultikampusList: Multikampus[] = [
     title: "ITB Kampus Jakarta",
     icon: "/src/assets/img/multikampus/jakarta.jpg",
     address:
-      "Gedung Graha Irama (Indorama) Lt. 10 & 12Jl. H. R. Rasuna Said Kav. 1 SetiabudiKota Jakarta Selatan, DKI Jakarta Indonesia 12950",
+      "Gedung Graha Irama (Indorama) Lt. 10 & 12 Jl. H. R. Rasuna Said Kav. 1 Setiabudi Kota Jakarta Selatan, DKI Jakarta Indonesia 12950",
     email: null
   }
 ];

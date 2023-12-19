@@ -3,7 +3,7 @@ import { Agenda } from "@/types";
 const CardAgenda = (props: Agenda) => {
   return (
     <div className="flex gap-4">
-      <div className="flex flex-col items-center w-20 px-3 pt-2 pb-3 bg-blue-600">
+      <div className="flex flex-col items-center w-20 px-3 pt-2 pb-3 bg-blue-900">
         <span className="font-sans font-medium text-2xl text-gray-100">
           {props.date}
         </span>

@@ -20,18 +20,29 @@ const ImageSlider = ({ slideArray }: SlideShowProps) => {
     });
   }
 
+  // function chooseImage() {
+  //   setImageIndex()
+  // }
+
   return (
     <>
-      <div className="relative w-full" style={{ maxWidth: "1440px" }}>
-        <div className="w-full flex overflow-x-hidden">
-          {slideArray.map((slide, index) => (
+      <div className="block relative w-full mt-24">
+        <div className="w-full flex overflow-x-hidden mt-3">
+          <a href={slideArray[imageIndex].url} className="w-full">
+            {/* {slideArray.map((slide, index) => (
+              <img
+                key={index}
+                src={slide.url}
+                alt=""
+                className="w-full object-cover block"
+              />
+            ))} */}
             <img
-              key={index}
-              src={slide.url}
-              alt=""
-              className="w-full object-cover block"
+              src={slideArray[imageIndex].src}
+              alt={slideArray[imageIndex].title}
+              className="w-full"
             />
-          ))}
+          </a>
         </div>
         <button
           onClick={showPrevImage}
@@ -45,8 +56,13 @@ const ImageSlider = ({ slideArray }: SlideShowProps) => {
         >
           <ArrowBigRight className="stroke-black fill-white w-8 h-8" />
         </button>
+        {/* <div>
+          {slideArray.map(() => (
+
+          ))}
+        </div> */}
       </div>
-      <p className="text-center">{slideArray[imageIndex].title}</p>
+      {/* <p className="text-center">{slideArray[imageIndex].title}</p> */}
     </>
   );
 };

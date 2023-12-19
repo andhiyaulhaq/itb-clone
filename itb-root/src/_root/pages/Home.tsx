@@ -5,6 +5,7 @@ import {
   Partner,
   SitemapChild,
   SitemapParent,
+  Socmed,
   Video
 } from "@/types";
 import {
@@ -14,6 +15,7 @@ import {
   PartnersList,
   SitemapParentsList,
   Slides,
+  SocmedList,
   VideosList
 } from "../../constants";
 import {
@@ -100,26 +102,27 @@ const Home = () => {
         <div className="max-w-6xl flex flex-col items-center my-14 gap-14">
           <h1 className="font-sans text-4xl font-normal text-justify">Video</h1>
           <div className="flex gap-8">
-            {VideosList.map(({ id, title, thumbnail }: Video) => (
-              <CardVideo key={id} title={title} thumbnail={thumbnail} />
+            {VideosList.map(({ title, thumbnail }: Video, index) => (
+              <CardVideo key={index} title={title} thumbnail={thumbnail} />
             ))}
           </div>
         </div>
       </section>
-      <section id="partners" className="w-full flex justify-center">
-        <div className="max-w-6xl flex flex-col items-center">
-          <div className="flex items-center">
-            {PartnersList.map(({ title, img }: Partner) => (
-              <img src={img} alt={title} />
+      <section id="partners" className="w-full flex justify-center pt-10">
+        <div className="flex flex-col items-center">
+          <div className="flex items-center gap-10">
+            {PartnersList.map(({ title, img }: Partner, index) => (
+              <img src={img} alt={title} className="h-24" key={index} />
             ))}
           </div>
         </div>
       </section>
-      <section id="multikampus" className="w-full flex justify-center">
-        <div className="flex gap-3">
+      <section id="multikampus" className="w-full flex justify-center my-28">
+        <div className="flex gap-7 pr-6">
           {MultikampusList.map(
-            ({ title, icon, address, email }: Multikampus) => (
+            ({ title, icon, address, email }: Multikampus, index) => (
               <CardMultikampus
+                key={index}
                 title={title}
                 icon={icon}
                 address={address}
@@ -130,16 +133,61 @@ const Home = () => {
         </div>
       </section>
       <section id="sitemap" className="w-full flex justify-center">
-        <div className="flex gap-8">
-          {SitemapParentsList.map(({ parent, children }: SitemapParent) => (
-            <div className="flex flex-col">
-              <h2>{parent}</h2>
-              {children.map(({ text, url }: SitemapChild) => (
-                <a href={url}>{text}</a>
-              ))}
-            </div>
-          ))}
+        <div className="flex gap-8 mr-16 text-gray-500">
+          {SitemapParentsList.map(
+            ({ parent, children }: SitemapParent, index) => (
+              <div className="flex flex-col w-48 mx-2" key={index}>
+                <h2 className="text-lg">{parent}</h2>
+                <ul>
+                  {children.map(({ text, url }: SitemapChild, index) => (
+                    <a href={url} key={index}>
+                      <li className="my-1">{text}</li>
+                    </a>
+                  ))}
+                </ul>
+              </div>
+            )
+          )}
         </div>
+      </section>
+      <section id="socmed" className="flex flex-col items-center my-20 ">
+        <ul className="flex gap-2">
+          {SocmedList.map(({ title, icon, url }: Socmed, index) => (
+            <li className="bg-gray-500 rounded-full w-8 h-8 flex justify-center items-center">
+              <a href={url}>
+                <img key={index} src={icon} alt={title} className="w-4 h-4" />
+              </a>
+            </li>
+          ))}
+        </ul>
+        <p>
+          ...................................................................
+        </p>
+        <ul className="flex gap-2">
+          <li>
+            <a href="">100 Tahun ITB</a>
+          </li>
+          ·
+          <li>
+            <a href="">Berita</a>
+          </li>
+          ·
+          <li>
+            <a href="">Agenda Kegiatan</a>
+          </li>
+          ·
+          <li>
+            <a href="">Fokus</a>
+          </li>
+          ·
+          <li>
+            <a href="">E-Book</a>
+          </li>
+          ·
+          <li>
+            <a href="">Peta Situs</a>
+          </li>
+        </ul>
       </section>
     </div>
   );

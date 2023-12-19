@@ -43,12 +43,19 @@ export interface SitemapParent {
 }
 
 export interface Slide {
-  url: string;
   title: string;
+  src: string;
+  url: string;
 }
 
 export interface SlideShowProps {
   slideArray: Slide[];
+}
+
+export interface Socmed {
+  title: string;
+  icon: string;
+  url: string;
 }
 
 export interface Video {
